@@ -1,0 +1,349 @@
+*{
+	padding: 0;
+	margin:0;
+	font-family: Montserrat;
+}
+html , body{
+	width: 100%;
+	height: 100%;
+}
+:root{
+	--naranja:#f39c11;
+	--azul:#6699cc;
+	--blanco:#f7f1e8;
+    --negro:#211400;
+    --neutro:#ffffff;
+    --bazul:#9bc1e8
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url(fonts/Montserrat.ttf);
+}
+/*------------------------------------ VISUALIZACION PARA EL JAVASCRIPT ------------------------*/
+.nv{
+	display: none !important;
+}
+
+.ver{
+	display: block !important;
+}
+
+/*----------------------------- MEDIA QUERY ----------------------------------*/
+/*PANTALLA CON MAS DE 1680 A 2000PX - 4K*/
+/*LAPTOPS CON HD */
+@media only screen and (min-width: 1681px) and (max-width: 2000px){
+    /*REDIMENCION EN CARRUSEL DE FOTOS*/
+   .logo{
+    	height: 15% !important;
+    	-webkit-transition: width .25s linear, background .25s linear;
+        transition: width .25s linear, background .25s linear;
+    }
+    #logoimg{
+    	height: 100% !important;
+    	position: relative !important;
+    }
+}
+
+/*LAPTOPS CON HD */
+/* @media only screen and (min-width: 1025px) and (max-width: 1680px){
+    REDIMENCION EN CARRUSEL DE FOTOS
+   .logo{
+        height: 15% !important;
+        -webkit-transition: width .25s linear, background .25s linear;
+        transition: width .25s linear, background .25s linear;
+    }
+    #logoimg{
+        height: 100% !important;
+        position: relative !important;
+    }
+} */
+
+
+/* ---------------------MODAL------------------- */
+#bg-negro {
+    width: 100%;
+    height: 100%;
+    float: left;
+    position: fixed;
+    background: rgba(0, 0, 0, .5);
+    z-index: 999999999;
+    transition-timing-function: linear;
+    /*-webkit-transition: .1s all;*/
+    opacity: 0;
+    visibility: hidden;
+}
+
+#modal {
+    float: left;
+    position: fixed;
+    background: #fff;
+    z-index: 999999999999;
+    border-radius: 2px;
+    top: 10%;
+    /* margin-top: -100px; */
+    box-shadow: 0px 5px 20px 2px rgba(0, 0, 0, .5);
+    transition-timing-function: linear;
+    /*-webkit-transition: .2s all;*/
+    opacity: 0;
+    visibility: hidden;
+    /*transition-timing-function: linear;
+    -webkit-transform: scale(.9);*/
+    width: 200px;
+    left: 50%;
+    overflow: hidden;
+}
+
+#modal>h1 {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 400;
+    color: #34495e;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#modal>p {
+    color: #6f7a8c;
+    width: 80%;
+    float: left;
+    margin-left: 10%;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+#modalimg{
+	width: 50%;
+	height: 30%;
+}
+
+.cmodal{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.chico {
+    width: 300px !important;
+    margin-left: -150px;
+}
+
+.verModal {
+    visibility: visible !important;
+    opacity: 1 !important;
+    -webkit-transform: scale(1) !important;
+}
+
+.grande {
+    width: 850px !important;
+    margin-left: -435px;
+}
+
+.menta{
+	border: 2px solid transparent;
+    font-color: red !important;
+    outline: none;
+    font-size: 1em;
+    width: 105px;
+}
+
+.amaranto{
+    border: 2px solid transparent;
+    color: #E52B50 !important;
+    background: transparent;
+    outline: none;
+    font-size: 1.3em;
+    width: 45px;
+    margin-left: 95%;
+    margin-top: 1%;
+}
+
+/*-------------------MENU HAMB---------------*/
+#menuh {
+    float: left;
+    position: fixed;
+    background: #fff;
+    z-index: 999999999999;
+    border-radius: 2px;
+    top: 25%;
+    /*margin-top: -100px;*/
+    box-shadow: 0px 5px 20px 2px rgba(0, 0, 0, .5);
+    transition-timing-function: linear;
+    /*-webkit-transition: .2s all;*/
+    opacity: 0;
+    visibility: hidden;
+    /*transition-timing-function: linear;
+    -webkit-transform: scale(.9);*/
+    width: 200px;
+    left: 95%;
+    overflow: hidden;
+}
+
+.vermenuh {
+    visibility: visible !important;
+    opacity: 1 !important;
+    -webkit-transform: scale(1) !important;
+}
+
+.chicom {
+    width: 110px !important;
+    /*margin-left: -150px;*/
+}
+
+#bg-blanco {
+    width: 100%;
+    height: 100%;
+    float: left;
+    position: fixed;
+    background: transparent;
+    z-index: 999999999;
+    transition-timing-function: linear;
+    /*-webkit-transition: .1s all;*/
+    opacity: 0;
+    visibility: hidden;
+}
+
+
+/* -------------estilos globales----------------------- */
+#bg{
+    padding: 0;
+    background: var(--neutro);
+}
+
+.header{
+    padding: 0;
+    height: 80px;
+    position: fixed;
+    z-index: 9999;
+    float: left;
+    box-shadow: 3px 0px 7px 0px rgba(0,0,0,.5);
+    background: var(--naranja);
+}
+
+button{
+    height: 30px;
+    width: 75px;
+    font-size: 15px;
+    color: white;
+    background:var(--negro);
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    /*text-shadow:0px -1px 0px rgba(0,0,0,.3);*/
+    /*box-shadow:   inset 0px -10px 20px rgba(0,0,0,.1);*/
+    transition:.2s all;
+}
+
+button:hover{
+    /*box-shadow:   inset 0px -10px 20px rgba(0,0,0,.2);*/
+    opacity: .9;
+}
+
+.espacio{
+    padding: 0;
+    height: 10px;
+}
+
+.menta{background: #FFCC33} /*PARA PODER USAR EL MODAL*/
+/* .amaranto{background: #E52B50} */
+.claro{background: #A8ABB2; color:#3A4659 !important;text-shadow:0px 0px 0px rgba(0,0,0,.3) !important; }
+
+
+/*===============INPUTS=================*/
+
+input[type="text"],
+input[type="password"] {
+    float: left;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 5px;
+    outline: none;
+    transition-timing-function: linear;
+    /*-webkit-transition: .5s all;*/
+}
+
+input[type="date"] {
+    float: left;
+    height: 32px;
+    width: 100%;
+    font-size: 13px;
+    font-weight: 200;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background: rgba(255, 255, 255, 1);
+    padding: 5px;
+    outline: none;
+    transition-timing-function: linear;
+    /*-webkit-transition: .5s all;*/
+    /* color: rgba(0, 0, 0, 1); */
+}
+
+select {
+    float: left;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: none;
+    padding: 5px;
+    outline: none;
+    transition-timing-function: linear;
+    /*-webkit-transition: .5s all;*/
+}
+
+
+/*--------------------INDEX-------------*/
+
+.menu , .textM{
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.textM a{
+    font-size: .9em;
+	color: var(--blanco);
+	text-decoration: none;
+}
+.textM a:hover{
+	color: var(--negro);
+}
+
+
+
+
+/*-------ALMACEN-----*/
+.menut{
+	padding: 0;
+    background: var(--blanco);
+	margin-top: 90px;
+	position: relative;
+	float: left;
+    border: 1px solid rgba(0,0,0,1);
+    border-radius: 3px;
+}
+
+
+/* ***********PARA ARREGLAR EL UI Y NO TENER PROBLEMAS CON LOS DATOS*********** */
+/* quita el resultado de la parte inferior, ese que decia si habia encontrado o no */
+.ui-helper-hidden-accessible{ 
+    display: none !important;
+}
+
+.ui-menu, .ui-widget, .ui-widget-content, .ui-autocomplete, .ui-front{
+    width: 47.5% !important;
+}
+
+
+.ui-menu-item {
+    border: 1px solid #d4d4d4 !important;
+    z-index: 99;
+    background: rgba(255,255,255,.6);
+    list-style: none;
+}
+
+.ui-menu-item:hover{
+    background-color: var(--bazul);
+}
